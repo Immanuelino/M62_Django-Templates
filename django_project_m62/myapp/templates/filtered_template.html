@@ -1,0 +1,13 @@
+<!-- templates/filtered_template.html -->
+{% extends 'base.html' %}
+
+{% block title %}Filtros en Django{% endblock %}
+
+{% block content %}
+    <h1>Filtros en Django</h1>
+    <p>Texto original: {{ texto }}</p>
+    <p>Texto en mayúsculas: {{ texto|upper }}</p>
+    <p>Texto en minúsculas: {{ texto|lower }}</p>
+    <p>Longitud del texto: {{ texto|length }}</p>
+    <p>Fecha actual: {{ fecha|date:"d/m/Y" }}</p>
+{% endblock %}

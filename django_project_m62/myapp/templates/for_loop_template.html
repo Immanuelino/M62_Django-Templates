@@ -1,0 +1,18 @@
+<!-- templates/for_loop_template.html -->
+{% extends 'base.html' %}
+
+{% block title %}Ciclo For en Django{% endblock %}
+
+{% block content %}
+    <h1>Ciclo For con condiciones</h1>
+    <ul>
+    {% for num in numeros %}
+        <li>
+            Número: {{ num }} 
+            {% if num|divisibleby:3 %}
+                (divisible entre 3)
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
